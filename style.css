@@ -1,0 +1,108 @@
+@font-face {
+    font-family: 'PixelUniCode';
+    src: url('Pixel-UniCode.ttf') format('truetype');
+}
+
+body {
+    
+
+    background-color: blue;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+    font-family: 'PixelUniCode', sans-serif;
+    text-align: center;
+    cursor: url('cursor.png'), auto;
+
+}
+
+img {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    max-width: 450px; 
+    height: auto;
+}
+
+button {
+    background-color: blue;
+    color: #fff;
+    padding: 20px 40px;
+    font-size: 44px;
+    border: 2px solid white;
+    cursor: pointer;
+    font-family: 'PixelUniCode', sans-serif;
+    border-radius: 10px;
+}
+
+button:hover {
+    background-color: rgba(105, 105, 105, 0.762);
+}
+
+#result {
+    white-space: pre-line; 
+    font-size: 60px;
+    max-width: 600px; 
+    line-height: 1.2; 
+}
+
+
+        #second-screen {
+            display: none; 
+            background-color: rgba(0, 0, 255, 1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 60px;
+        }
+
+
+#animated-squares-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    pointer-events: none; 
+}
+
+
+.animated-square {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: red; 
+    opacity: 0; 
+    animation: flashSquare 3s linear infinite;
+}
+
+
+@keyframes flashSquare {
+    0% {
+        opacity: 0; 
+    }
+    10% {
+        opacity: 1; 
+    }
+    50% {
+        opacity: 1; 
+    }
+    90% {
+        opacity: 0; 
+    }
+    100% {
+        opacity: 0; 
+    }
+}
